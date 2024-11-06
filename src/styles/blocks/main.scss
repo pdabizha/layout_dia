@@ -1,0 +1,23 @@
+.main {
+  display: grid;
+  row-gap: $main-row-gap;
+  padding-top: $main-row-gap;
+
+  @include on-tablet {
+    row-gap: $main-row-gap-on-tablet;
+    padding-top: $main-row-gap-on-tablet;
+  }
+}
+
+.title{
+  font-size: 32px;
+  line-height: 150%;
+}
+
+.heading{
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 3px;
+  color: #C0CDD7;
+  text-transform: uppercase;
+}

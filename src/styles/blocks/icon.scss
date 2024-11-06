@@ -1,0 +1,22 @@
+.icon {
+  margin: 0;
+  display: block;
+  width: 24px;
+  height: 24px;
+
+  &--menu{
+    margin-left: 32px;
+    background-image: url(../images/icons/icon-menu.svg);
+
+    @include on-desktop {
+      display: none;
+    }
+  }
+
+  &--close{
+    background-image: url(../images/icons/icon-close.svg);
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+}

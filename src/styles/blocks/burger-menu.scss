@@ -1,0 +1,26 @@
+.burger-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 100vh;
+
+  background: $header-bg-color--dark;
+  padding-block: 40px;
+
+  box-sizing: border-box;
+  border-radius: 0 0 30px 30px;
+  box-shadow: 0 5px 5px #000;
+
+  transition: all 0.3s;
+  opacity: 0;
+  transform: translateY(-100%);
+  pointer-events: none;
+
+  &:target {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+  }
+}

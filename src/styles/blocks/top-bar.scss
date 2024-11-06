@@ -1,0 +1,44 @@
+.top-bar{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  @include content-padding-inline;
+
+  @include on-tablet {
+    margin-bottom: 56px;
+  }
+
+  @include on-desktop {
+    justify-content: space-between;
+    margin-bottom: 56px;
+  }
+
+  @include on-large-screen {
+    margin-inline: 0;
+  }
+
+
+  &__menu {
+    display: none;
+
+    @include on-desktop {
+      display: block;
+    }
+  }
+
+  &__logo{
+    height: 28px;
+    cursor: pointer;
+
+    @include hover(transform, scale(1.2));
+  }
+
+  &__hire-us{
+    margin-left: auto;
+
+    @include on-desktop {
+      margin: 0;
+    }
+  }
+}

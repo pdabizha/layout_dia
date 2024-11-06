@@ -1,0 +1,120 @@
+.testimonials {
+  &__text{
+    margin-bottom: 48px;
+
+    @include on-tablet {
+      margin-bottom: 56px;
+    }
+
+    @include on-desktop {
+      margin-bottom: 85px;
+    }
+  }
+
+  &__cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+
+    @include on-desktop {
+      flex-wrap: nowrap;
+    }
+  }
+  &-card{
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 32px 42px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    text-align: center;
+
+    @include on-desktop{
+      width: auto;
+    }
+
+    @include hover (transform, scale(1.1));
+
+    &__image-wrapper{
+      width: 100%;
+      max-width: 250px;
+      position: relative;
+      aspect-ratio: 1 / 1;
+      margin-bottom: 24px;
+    }
+
+    &__image{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 60%;
+      height: 60%;
+      transform: translate(-50%, -50%);
+
+      &::before,
+      &::after {
+      content: '';
+      position: absolute;
+      width: 35%;
+      height: 100%;
+      background-color: $main-blue-color; /* Adjust the blue shade */
+      border-radius: 12px;
+      transform: rotate(30deg);
+      z-index: -1;
+      }
+
+      &::before {
+        top: -30%;
+        left: 0;
+
+      }
+      &::after {
+        right: 0;
+        bottom: -30%;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        z-index: 2;
+      }
+    }
+
+    &__quote-marks{
+      display: block;
+      background-image: url(../images/testimonials/quotes.svg);
+      width: 24px;
+      height: 24px;
+      margin-bottom: 8px;
+    }
+
+    &__quote{
+      margin: 0;
+      margin-bottom: 16px;
+      max-width: 362px;
+      font-weight: 600;
+      color: $main-text-color;
+      font-size: 13px;
+      line-height: 150%;
+    }
+    &__author{
+      margin: 0;
+      margin-bottom: 4px;
+      font-size: 13px;
+      font-weight: 600;
+      color: $titles-color;
+      line-height: 150%;
+    }
+    &__company{
+      font-family: Poppins, sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 3px;
+    }
+  }
+}

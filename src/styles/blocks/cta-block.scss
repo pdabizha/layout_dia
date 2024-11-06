@@ -1,0 +1,66 @@
+.cta-block{
+  background-color: #fff;
+  padding-block: 72px;
+
+  @include on-tablet{
+    background-image: url(../images/Shapes.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+
+  &__content{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include on-tablet{
+      padding-block: 200px;
+    }
+
+    @include on-desktop{
+      max-width: 754px;
+      margin: 0 auto;
+    }
+
+
+  }
+  &__title{
+    font-size: 44px;
+    line-height: 120%;
+    margin-bottom: 24px;
+
+    @include on-tablet{
+      font-size: 52px;
+    }
+  }
+  &__description{
+    color: $main-text-color;
+    font-size: 22px;
+    line-height: 150%;
+    margin-bottom: 64px;
+
+    @include on-tablet{
+      font-size: 24px;
+    }
+  }
+  &__button{
+    display: block;
+    background-color: $main-blue-color;
+    border-radius: 8px;
+    height: 56px;
+    line-height: 56px;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font-family: Poppins, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    width: 100%;
+
+    @include on-tablet{
+      max-width: 264px;
+    }
+  }
+}

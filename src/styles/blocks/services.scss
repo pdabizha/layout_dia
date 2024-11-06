@@ -1,0 +1,125 @@
+.services{
+  &__content{
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    position: relative;
+
+
+    @include on-tablet{
+      gap: 56px;
+    }
+
+    @include on-desktop{
+      flex-direction: row;
+      justify-content: space-between;
+      padding-top: $main-row-gap-on-tablet;
+    }
+  }
+  &__text{
+    display: flex;
+    flex-direction: column;
+
+    @include on-tablet{
+      max-width: 264px;
+    }
+  }
+
+  &__title{
+    text-align: left;
+    margin-bottom: 24px;
+  }
+
+  &__description{
+    font-family: "Open sans", sans-serif;
+    font-size: 14px;
+    line-height: 150%;
+    color: $main-text-color;
+  }
+  &__cards{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+
+    @include on-tablet{
+      gap: 20px;
+    }
+
+    @include on-desktop{
+      width: 50%;
+    }
+  }
+}
+
+.card{
+  border-radius: 16px;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @include on-tablet{
+    width: calc(50% - 10px);
+  }
+
+  &__number{
+    font-family: Poppins, sans-serif;
+    font-weight: 600;
+    text-align: center;
+    color: $main-blue-color;
+    line-height: 24px;
+
+    width: 46px;
+    height: 24px;
+    background-color: rgba($color: $main-blue-color, $alpha: 0.1);
+    border-radius: 23px;
+
+    margin-bottom: 24px;
+  }
+  &__list{
+    list-style-type: none;
+    margin-bottom: 32px;
+
+  }
+  &__item{
+    font-weight: 600;
+    color: $main-text-color;
+    line-height: 150%;
+  }
+
+  &__link{
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    color: #334563;
+    font-family: Poppins, sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+
+    &::before{
+      content: url(../images/services/arrow_right_with_line.svg);
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      background-color: $main-blue-color;
+      margin-right: 16px;
+      box-sizing: border-box;
+      padding: 12px;
+    }
+
+    &:hover::before{
+      transform: scale(1.2);
+      transition: all 0.3s;
+    }
+
+  }
+  &--higher{
+    @include on-tablet{
+      transform: translateY(-50%);
+    }
+  }
+}
