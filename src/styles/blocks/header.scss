@@ -11,24 +11,17 @@
   display: flex;
   flex-direction: column;
 
-
   @include on-desktop {
     padding-top: 48px;
   }
 
-  &--dark{
+  &--dark {
     border-radius: 0 0 30px 30px;
     background: $header-bg-color--dark;
   }
 
-  &--blue{
-    border-bottom-left-radius: 200px;
-    background: $header-bg-color--blue;
-  }
-
   &__top-bar {
     margin-bottom: 48px;
-    
   }
 
   &__bottom {
@@ -49,7 +42,6 @@
     @include on-large-screen {
       margin-inline: 0;
     }
-
   }
 
   &__slider {
@@ -60,6 +52,7 @@
     border-radius: 30px;
     height: 390px;
 
+    transition: border-radius $transition-duration;
 
     @include on-desktop {
       width: 50%;

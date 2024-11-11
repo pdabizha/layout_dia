@@ -5,20 +5,20 @@
   }
 }
 
-@mixin on-tablet{
-  @media (min-width: $tablet-min-width) {
+@mixin on-tablet {
+  @media screen and (min-width: $tablet-min-width) {
     @content;
   }
 }
 
-@mixin on-desktop{
-  @media (min-width: $desktop-min-width) {
+@mixin on-desktop {
+  @media screen and (min-width: $desktop-min-width) {
     @content;
   }
 }
 
-@mixin on-large-screen{
-  @media (min-width: $large-screen-min-width) {
+@mixin on-large-screen {
+  @media screen and (min-width: $large-screen-min-width) {
     @content;
   }
 }

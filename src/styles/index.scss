@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 @import 'utils';
 @import 'fonts';
 @import 'typography';
@@ -15,14 +19,25 @@
 @import './blocks/services';
 @import './blocks/testimonials';
 @import './blocks/cta-block';
+@import './blocks/footer';
+@import './blocks/send-us-massage';
+@import './blocks/contact-us';
+@import './blocks/input';
+@import './blocks/theme-switcher';
+@import './blocks/theme--color';
 
-*{
+* {
   margin: 0;
   padding: 0;
   border: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: Poppins, sans-serif;
   font-weight: 600;
   color: $titles-color;

@@ -1,33 +1,16 @@
 'use strict';
 
-// document.addEventListener('DOMContentLoaded', function() {
-//   const slides = [
-//     '../images/slider/slider-img-1.jpg',
-//     '../images/slider/slider-img-2.jpg'
-//   ];
+document.addEventListener('input', function (event) {
+  if (event.target.classList.contains('input__textarea')) {
+    event.target.style.height = '26px'; // Сбросим высоту
+    event.target.style.height = `${event.target.scrollHeight}px`; // Установим новую высоту
+  }
+});
 
-//   let currentSlideIndex = 0;
+const page = document.querySelector('.page');
+const switcher = document.querySelector('.theme-switcher');
 
-//   const slider = document.querySelector('.slider');
 
-//   const updateSlide = () => {
-//     const currentSlide = slides[currentSlideIndex];
-//     slider.style.backgroundImage = `url(${currentSlide})`;
-//   };
-
-//   document.querySelector('.slider__button-next').addEventListener('click', (e) => {
-//     e.preventDefault();
-//     currentSlideIndex = (currentSlideIndex + 1) % slides.length;
-//     updateSlide();
-//   });
-
-//   document.querySelector('.slider__button-prev').addEventListener('click', (e) => {
-//     e.preventDefault();
-//     currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
-//     updateSlide();
-//   });
-
-//   // Инициализация первого слайда
-//   updateSlide();
-
-// });
+switcher.addEventListener('click', () => {
+  page.classList.toggle('theme--color');
+});

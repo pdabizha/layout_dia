@@ -5,9 +5,7 @@
   background-size: cover;
   display: flex;
 
-
-
-  &__content{
+  &__content {
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -16,7 +14,6 @@
     padding-inline: 20px;
     padding-bottom: 24px;
     margin-top: auto;
-
 
     @include on-tablet {
       padding-inline: 41px;
@@ -29,19 +26,17 @@
 
       padding-bottom: 45px;
       padding-inline: 78px;
-
     }
-
   }
 
-  &__buttons{
+  &__buttons {
     height: 32px;
 
     display: flex;
     gap: 16px;
   }
 
-  &__button{
+  &__button {
     width: 32px;
     border-radius: 50%;
     background-color: #fff;
@@ -52,7 +47,8 @@
     align-items: center;
     justify-content: center;
 
-    &-prev, &-next {
+    &-prev,
+    &-next {
       background-size: auto 9px;
       background-repeat: no-repeat;
       background-position: center;
@@ -65,7 +61,7 @@
       background-image: url(../images/slider/arrow-right.svg);
     }
 
-    @include hover (transform, scale(1.2));
+    @include hover(transform, scale(1.2));
   }
 
   &__text {
@@ -74,7 +70,7 @@
     gap: 8px;
   }
 
-  &-intro{
+  &-intro {
     margin: 0;
     font-weight: 700;
     font-size: 13px;
@@ -83,12 +79,11 @@
     color: #fff;
   }
 
-  &-description{
+  &-description {
     margin: 0;
-    font-family: "Open sans", sans-serif;
+    font-family: 'Open sans', sans-serif;
     font-weight: 400;
     font-size: 14px;
     line-height: 140%;
   }
 }
-

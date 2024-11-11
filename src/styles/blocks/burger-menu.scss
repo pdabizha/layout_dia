@@ -18,6 +18,10 @@
   transform: translateY(-100%);
   pointer-events: none;
 
+  &--color {
+    background: $light-pink;
+  }
+
   &:target {
     opacity: 1;
     transform: translateY(0);

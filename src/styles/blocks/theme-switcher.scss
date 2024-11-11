@@ -1,0 +1,21 @@
+.theme-switcher {
+  display: block;
+  width: 60px;
+  border-radius: 40px;
+  cursor: pointer;
+  background-color: #fff;
+  padding: 7px;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 50%;
+    padding-bottom: 50%;
+    border-radius: 50%;
+    background-color: $main-blue-color;
+
+    transition:
+      color 0.3s,
+      transform 0.3s;
+  }
+}

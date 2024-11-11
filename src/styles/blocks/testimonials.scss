@@ -1,5 +1,5 @@
 .testimonials {
-  &__text{
+  &__text {
     margin-bottom: 48px;
 
     @include on-tablet {
@@ -11,16 +11,17 @@
     }
   }
 
-  &__cards{
+  &__cards {
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
 
     @include on-desktop {
       flex-wrap: nowrap;
+      justify-content: center;
     }
   }
-  &-card{
+  &-card {
     background-color: #fff;
     border-radius: 16px;
     padding: 32px 42px;
@@ -32,13 +33,13 @@
     width: 100%;
     text-align: center;
 
-    @include on-desktop{
+    @include on-desktop {
       width: auto;
     }
 
-    @include hover (transform, scale(1.1));
+    @include hover(transform, scale(1.08));
 
-    &__image-wrapper{
+    &__image-wrapper {
       width: 100%;
       max-width: 250px;
       position: relative;
@@ -46,7 +47,7 @@
       margin-bottom: 24px;
     }
 
-    &__image{
+    &__image {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -56,20 +57,19 @@
 
       &::before,
       &::after {
-      content: '';
-      position: absolute;
-      width: 35%;
-      height: 100%;
-      background-color: $main-blue-color; /* Adjust the blue shade */
-      border-radius: 12px;
-      transform: rotate(30deg);
-      z-index: -1;
+        content: '';
+        position: absolute;
+        width: 35%;
+        height: 100%;
+        background-color: $main-blue-color; /* Adjust the blue shade */
+        border-radius: 12px;
+        transform: rotate(30deg);
+        z-index: -1;
       }
 
       &::before {
         top: -30%;
         left: 0;
-
       }
       &::after {
         right: 0;
@@ -85,15 +85,18 @@
       }
     }
 
-    &__quote-marks{
+    &__quote-marks {
       display: block;
-      background-image: url(../images/testimonials/quotes.svg);
       width: 24px;
       height: 24px;
       margin-bottom: 8px;
+
+      svg {
+        fill: $main-blue-color;
+      }
     }
 
-    &__quote{
+    &__quote {
       margin: 0;
       margin-bottom: 16px;
       max-width: 362px;
@@ -102,15 +105,16 @@
       font-size: 13px;
       line-height: 150%;
     }
-    &__author{
+    &__author {
       margin: 0;
+      margin-top: auto;
       margin-bottom: 4px;
       font-size: 13px;
       font-weight: 600;
       color: $titles-color;
       line-height: 150%;
     }
-    &__company{
+    &__company {
       font-family: Poppins, sans-serif;
       font-weight: 700;
       font-size: 13px;

@@ -3,15 +3,11 @@
     overflow: hidden; /* not to scroll the page */
   }
 
-  &__body {
-    min-width: 320px;
+  min-width: 320px;
 
-    font-family: "Open sans", sans-serif;
-    font-weight: 400;
-    font-size: 14px;
+  font-family: 'Open sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
 
-    background: $c-gray;
-    scroll-behavior: smooth;
-  }
+  background: $c-gray;
 }
-
