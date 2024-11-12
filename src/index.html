@@ -485,7 +485,10 @@
           <section class="send-us-massage">
             <h2 class="send-us-massage__title">Send us a message</h2>
             <div class="send-us-massage__form">
-              <form onsubmit="this.reset(); return false;">
+              <form
+                onsubmit="this.reset(); return false;"
+                autocomplete="on"
+              >
                 <label>
                   <input
                     class="input"
@@ -493,6 +496,7 @@
                     name="contact-email"
                     placeholder="Email"
                     required
+                    autocomplete="email"
                   />
                 </label>
                 <label>
@@ -502,6 +506,7 @@
                     name="contact-name"
                     placeholder="Your name"
                     required
+                    autocomplete="name"
                   />
                 </label>
                 <textarea
@@ -509,6 +514,7 @@
                   name="contact-message"
                   placeholder="Your message"
                   required
+                  autocomplete="off"
                 ></textarea>
 
                 <button
