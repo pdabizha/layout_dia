@@ -37,11 +37,6 @@
       transform: scale(0);
       transform-origin: center;
     }
-
-    &--color::after {
-      background: $light-pink;
-    }
-
     &:hover::after {
       transform: scale(1);
     }

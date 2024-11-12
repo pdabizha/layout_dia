@@ -8,6 +8,10 @@
     }
   }
 
+  .burger-menu__content {
+    background-color: $light-pink;
+  }
+
   .header__slider {
     @include on-desktop {
       border-top-left-radius: 200px;

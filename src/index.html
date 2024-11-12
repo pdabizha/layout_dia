@@ -33,10 +33,70 @@
             alt="air-logo"
           />
         </a>
-        <a
-          href="#menu"
-          class="icon icon--menu"
-        ></a>
+
+        <div class="header__burger-menu burger-menu">
+          <a
+            href="#"
+            class="burger-menu_button burger-menu_button--open"
+          ></a>
+          <div class="burger-menu__content">
+            <div class="container">
+              <div class="burger-menu__top">
+                <a
+                  href="#"
+                  class="top-bar__logo-link"
+                >
+                  <img
+                    class="top-bar__logo"
+                    src="./images/logo/logo.svg"
+                    alt="air-logo"
+                  />
+                </a>
+                <a
+                  href="#"
+                  class="burger-menu_button burger-menu_button--close"
+                ></a>
+              </div>
+              <nav class="burger-menu__nav">
+                <ul class="burger-menu__nav-list">
+                  <li>
+                    <a
+                      class="burger-menu__nav-item"
+                      href="#about-us"
+                    >
+                      About us
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="burger-menu__nav-item"
+                      href="#services"
+                    >
+                      Services
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="burger-menu__nav-item"
+                      href="#testimonials"
+                    >
+                      Testimonials
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="burger-menu__nav-item"
+                      href="#contact-us"
+                    >
+                      Contact Us
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+
         <nav class="nav top-bar__menu">
           <ul class="nav__list">
             <li class="nav__item">
@@ -123,56 +183,6 @@
         </div>
       </div>
     </header>
-
-    <aside
-      class="burger-menu"
-      id="menu"
-    >
-      <div class="container">
-        <div class="burger-menu__content">
-          <a
-            href="#"
-            class="burger-menu__icon icon icon--close"
-          ></a>
-          <nav class="nav">
-            <ul class="nav__list nav__list--burger">
-              <li class="nav__item">
-                <a
-                  href="#about-us"
-                  class="nav__link"
-                >
-                  About us
-                </a>
-              </li>
-              <li class="nav__item">
-                <a
-                  href="#services"
-                  class="nav__link"
-                >
-                  Services
-                </a>
-              </li>
-              <li class="nav__item">
-                <a
-                  href="#testimonials"
-                  class="nav__link"
-                >
-                  Testimonials
-                </a>
-              </li>
-              <li class="nav__item">
-                <a
-                  href="#contact-us"
-                  class="nav__link"
-                >
-                  Contact Us
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </aside>
 
     <main class="main">
       <!--#region about-us-->
@@ -475,7 +485,7 @@
           <section class="send-us-massage">
             <h2 class="send-us-massage__title">Send us a message</h2>
             <div class="send-us-massage__form">
-              <form onsubmit="this.reset(); location.reload(); return false;">
+              <form onsubmit="this.reset(); return false;">
                 <label>
                   <input
                     class="input"

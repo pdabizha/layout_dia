@@ -14,3 +14,15 @@ const switcher = document.querySelector('.theme-switcher');
 switcher.addEventListener('click', () => {
   page.classList.toggle('theme--color');
 });
+
+
+const burgerButtons = document.querySelectorAll('.burger-menu_button');
+const burgerMenu = document.querySelector('.burger-menu__content');
+
+burgerButtons.forEach(button => {
+  button.addEventListener('click', function(event) {
+    console.log('1');
+    event.preventDefault();
+    burgerMenu.classList.toggle('burger-menu__content_active');
+  });
+});
