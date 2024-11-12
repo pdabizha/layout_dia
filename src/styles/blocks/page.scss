@@ -1,5 +1,5 @@
 .page {
-  &:has(.burger-menu:target) {
+  &:has(.page__menu:target) {
     overflow: hidden; /* not to scroll the page */
   }
 
@@ -10,4 +10,25 @@
   font-size: 14px;
 
   background: $c-gray;
+
+  &__menu {
+    position: absolute;
+    background-color: $main-blue-color;
+    border-radius: 0 0 30px 30px;
+    height: 100vh;
+    width: 100%;
+    left: -100%;
+    pointer-events: none;
+
+    top: 0;
+    z-index: 20;
+    padding-block: 21px;
+    transition: all $transition-duration;
+
+    &:target {
+      opacity: 1;
+      left: 0;
+      pointer-events: all;
+    }
+  }
 }

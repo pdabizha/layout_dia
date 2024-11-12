@@ -38,6 +38,40 @@
     @include hover(transform, scale(1.2));
   }
 
+  &__icon-menu {
+    position: relative;
+    display: block;
+    width: 24px;
+    height: 24px;
+
+    &::after,
+    &::before {
+      content: '';
+      width: 18px;
+      height: 2px;
+      background-color: #fff;
+      position: absolute;
+
+      transition: transform 0.3s;
+      transform: scale(1);
+      transform-origin: right;
+    }
+    &::after {
+      top: 8px;
+    }
+    &::before {
+      bottom: 8px;
+    }
+
+    &:hover::after {
+      transform: scaleX(0.8);
+    }
+
+    @include on-desktop {
+      display: none;
+    }
+  }
+
   &__right {
     margin-left: auto;
 
