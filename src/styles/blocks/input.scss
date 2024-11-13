@@ -17,15 +17,6 @@
     margin-bottom: 48px;
   }
 
-  &:active,
-  &:focus,
-  &:-webkit-autofill,
-  &:-webkit-autofill:hover,
-  &:-webkit-autofill:focus {
-    border-bottom: 2px solid $hover-blue-color;
-    color: #fff;
-  }
-
   &__textarea {
     resize: none;
     height: 26px;
@@ -58,4 +49,20 @@
 
     @include hover(transform, scale(1.2));
   }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border-bottom: 2px solid $hover-blue-color !important;
+  -webkit-text-fill-color: #fff !important;
+  background-color: transparent !important;
+  box-shadow: 0 0 0 1000px transparent inset !important;
+  transition: background-color 5000s ease-in-out 0s !important;
 }
